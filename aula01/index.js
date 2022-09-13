@@ -1,25 +1,25 @@
 "use strict";
 //---------------------------1-------------------------------//
-const doisNumeros = [2, 3];
-console.log('Soma de dois números: ' + sum(doisNumeros));
+const twoNumbers = [3, 2];
+console.log('Soma de dois números: ' + sum(twoNumbers));
 function sum(numbers) {
-    return numbers[0] + numbers[1];
+    let sum = 0;
+    numbers.forEach(function (value) {
+        sum += value;
+    });
+    return sum;
 }
 //---------------------------2-------------------------------//
-const cincoNumeros = [5, 5, 5, 5, 5];
-console.log('Media de cinco números: ' + average(cincoNumeros));
+const fiveNumbers = [5, 5, 5, 5, 10];
+console.log('Media de cinco números: ' + average(fiveNumbers));
 function average(numbers) {
-    let avg = 0;
-    numbers.forEach(function (value) {
-        avg += value;
-    });
-    return avg / numbers.length;
+    return sum(numbers) / numbers.length;
 }
-const dadosImc = {
-    altura: 1.82,
-    peso: 90
+const dataImc = {
+    height: 1.82,
+    weight: 90
 };
-console.log('Cálculo IMC: ' + computeImc(dadosImc).toFixed(2));
-function computeImc(dados) {
-    return dados.peso / dados.altura ** 2;
+console.log('Cálculo IMC: ' + computeImc(dataImc).toFixed(2));
+function computeImc(data) {
+    return data.weight / data.height ** 2;
 }
