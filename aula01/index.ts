@@ -1,30 +1,17 @@
 //---------------------------1-------------------------------//
+const value1: number = 3;
+const value2: number = 2;
 
-const twoNumbers: number[] = [3,2];
+console.log('Soma dos números '  + value1 + ' e ' + value2 + ' = ' +  sum(value1, value2));
 
-console.log('Soma de dois números: ' + sum(twoNumbers));
-
-function sum(numbers: number[]): number { 
-  let sum: number = 0;
-  numbers.forEach(function (value) {
-      sum += value;
-  });
-
-  return sum;
-}
 
 //---------------------------2-------------------------------//
-
 const fiveNumbers: number[] = [5,5,5,5,10];
 
-console.log('Media de cinco números: ' + average(fiveNumbers));
+console.log('Media dos números ' + fiveNumbers + ' = ' + average(fiveNumbers));
 
-function average(numbers: number[]): number {
-  return sum(numbers)/numbers.length;
-}
 
 //---------------------------3-------------------------------//
-
 type People = {
   height: number,
   weight: number;
@@ -35,7 +22,26 @@ const dataImc: People = {
   weight : 90
 };
 
-console.log('Cálculo IMC: ' + computeImc(dataImc).toFixed(2));
+console.log('Cálculo IMC ' + 'da altura ' + dataImc.height + ' e peso ' + dataImc.weight + ' = ' + computeImc(dataImc).toFixed(2));
+
+
+//----------------------Funções---------------------------//
+function sum(value1: number, value2: number): number {
+  return value1 + value2;
+}
+
+function average(numbers: number[]): number {
+  return sumArray(numbers)/numbers.length;
+}
+
+function sumArray(numbers: number[]): number { 
+  let sum: number = 0;
+  numbers.forEach(function (value) {
+      sum += value;
+  });
+
+  return sum;
+}
 
 function computeImc(data: People): number {
   return data.weight/data.height**2;
