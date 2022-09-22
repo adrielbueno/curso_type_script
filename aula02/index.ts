@@ -68,8 +68,7 @@ function atividade3(): number[]{
 
   let auxiliar: number[] = [];
 
-  for(let i = 0; i < numeros.length; i++) {
-    
+  for(let i = 0; i < numeros.length; i++) {    
     auxiliar.push(numeros[i].reduce((acc, value) => acc + value));
   }
   return auxiliar;
