@@ -48,7 +48,6 @@ function atividade2() {
 function atividade3() {
     const numeros = atividade2();
     let auxiliar = [];
-    let cont = 0;
     for (let i = 0; i < numeros.length; i++) {
         auxiliar.push(numeros[i].reduce((acc, value) => acc + value));
     }

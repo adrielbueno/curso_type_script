@@ -63,17 +63,14 @@ function atividade2(): number[][]{
   return auxiliar;
 }
 
-function atividade3(){
-
+function atividade3(): number[]{
   const numeros: number[][] = atividade2();
 
   let auxiliar: number[] = [];
-  let cont = 0;
 
   for(let i = 0; i < numeros.length; i++) {
     
-    auxiliar.push( numeros[i].reduce((acc, value) => acc + value) );
+    auxiliar.push(numeros[i].reduce((acc, value) => acc + value));
   }
   return auxiliar;
-
 }
